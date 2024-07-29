@@ -1,13 +1,9 @@
-﻿﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     ViewData["isDashboard"] = true;
 }
 
-@*Summary Widgets*@
+@* Summary Widgets *@
 <div class="row mb-4">
-
     <div class="col-md-4">
         <div class="d-flex flex-row widget summary income">
             <div class="d-flex flex-column justify-content-center p-5">
@@ -45,7 +41,7 @@
     </div>
 </div>
 
-@*Doughnut and Spline Chart*@
+@* Doughnut and Spline Chart *@
 <div class="row mb-4">
     <div class="col-md-4">
         <div class="widget chart">
@@ -102,10 +98,10 @@
     </div>
 </div>
 
-@*Recent Transactions and More*@
+@* Recent Transactions and Savings Chart *@
 <div class="row">
     <div class="col-md-6">
-        <div class="widget">
+        <div class="widget transactions">
             <div class="p-4">
                 <h5 class="fw-bold">Recent Transactions</h5>
             </div>
@@ -122,9 +118,34 @@
         </div>
     </div>
     <div class="col-md-6">
-        <div class="widget h-100">
-            <div class="d-flex justify-content-center align-items-center h-100">
-                <span><i class="fa-solid fa-plus fa-2xl"></i> Widget</span>
+        <div class="widget savings">
+            <div class="p-4">
+                <h5 class="fw-bold">Monthly Savings</h5>
+                <h2>Total Savings: @ViewBag.TotalSavings</h2>
+            </div>
+            <div class="px-4 pb-4">
+                <ejs-chart id="monthly-savings-chart" background="#1a222b"
+                           palettes=@(new string[]{"#54ffa9","#ff4c4c"})>
+                    <e-chart-primaryxaxis valueType="Category">
+                        <e-majorgridlines width="0"></e-majorgridlines>
+                        <e-majorticklines width="0"></e-majorticklines>
+                    </e-chart-primaryxaxis>
+                    <e-chart-primaryyaxis>
+                        <e-majorgridlines width="1" color="#32414d" dashArray="3,5"></e-majorgridlines>
+                        <e-majorticklines width="0"></e-majorticklines>
+                        <e-linestyle width="0"></e-linestyle>
+                    </e-chart-primaryyaxis>
+                    <e-chart-chartarea>
+                        <e-chartarea-border width="0"></e-chartarea-border>
+                    </e-chart-chartarea>
+                    <e-series-collection>
+                        <e-series dataSource="@ViewBag.MonthlySavings" xName="Month" yName="Savings" type="@Syncfusion.EJ2.Charts.ChartSeriesType.Column">
+                            <e-series-marker visible="true"></e-series-marker>
+                        </e-series>
+                    </e-series-collection>
+                    <e-chart-legendsettings visible="false"></e-chart-legendsettings>
+                    <e-chart-tooltipsettings enable shared></e-chart-tooltipsettings>
+                </ejs-chart>
             </div>
         </div>
     </div>

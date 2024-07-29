@@ -15,7 +15,7 @@ html {
 }
 
 *:not(.fa-solid):not(.fa):not(.e-icons) {
-    font-family: "Inter"
+    font-family: "Inter";
 }
 
 body {
@@ -35,26 +35,25 @@ body {
     height: 92vh;
 }
 
-
-/*BreadCrumb*/
+/* BreadCrumb */
 .e-breadcrumb a, .e-breadcrumb a:hover {
     text-decoration: none !important;
     color: inherit !important;
 }
 
-/*Button*/
+/* Button */
 .btn:focus, .btn:active {
     outline: none !important;
     box-shadow: none;
 }
 
-/*Hyperlink*/
+/* Hyperlink */
 .no-a-decoration, .no-a-decoration:hover {
     text-decoration: none;
     color: inherit;
 }
 
-/*Grid*/
+/* Grid */
 .e-grid {
     border: 0;
     border-radius: 5px;
@@ -126,7 +125,7 @@ body {
     border-bottom-right-radius: 5px;
 }
 
-/*Logo*/
+/* Logo */
 .logo-wrapper {
     height: 70px;
     display: flex;
@@ -138,7 +137,7 @@ body {
     padding: 10px 10px;
 }
 
-/*Menu*/
+/* Menu */
 #menu {
     width: 100% !important;
     background-color: inherit;
@@ -183,9 +182,7 @@ body {
             margin-top: 35px;
         }
 
-
-
-/*Navbar*/
+/* Navbar */
 nav.navbar {
     background-color: rgba(18, 22, 29);
 }
@@ -207,7 +204,7 @@ nav.navbar {
     margin-left: 290px;
 }
 
-/*Profile Pic*/
+/* Profile Pic */
 img.profile-pic {
     width: 45px;
     height: 45px;
@@ -229,7 +226,7 @@ img.profile-pic {
         line-height: 1;
     }
 
-/*Radio Button Group*/
+/* Radio Button Group */
 .e-btn-group.custom-rbt-group {
     width: 100%;
 }
@@ -251,10 +248,10 @@ img.profile-pic {
     border: 1px solid #fff;
 }
 
-/*SideBar*/
+/* SideBar */
 #sidebar {
     background-color: #12161d;
-    border-right: 1px dashed rgba(75,82,85,0.24);
+    border-right: 1px dashed rgba(75, 82, 85, 0.24);
     padding: 10px 20px;
     overflow: hidden;
 }
@@ -294,7 +291,6 @@ img.profile-pic {
         display: none !important;
     }
 
-
     #sidebar.e-open .e-anchor-wrap,
     #sidebar.e-close .e-menu-icon, #sidebar.e-open .e-menu-icon {
         visibility: visible;
@@ -317,7 +313,7 @@ img.profile-pic {
     content: '\f101'
 }
 
-/*Widget*/
+/* Widget */
 .widget {
     border-radius: 1rem;
     background-color: #1a222b;
@@ -348,4 +344,9 @@ img.profile-pic {
 
     .widget.chart {
         padding: 5px;
+    }
+
+    .widget.transactions,
+    .widget.savings {
+        height: 100%;
     }

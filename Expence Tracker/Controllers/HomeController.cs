@@ -2,7 +2,7 @@ using Expence_Tracker.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace Expence_Tracker.Controllers
+namespace Expense_Tracker.Controllers
 {
     public class HomeController : Controller
     {
